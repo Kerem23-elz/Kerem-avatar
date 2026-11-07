@@ -1,0 +1,28 @@
+# Kerem Avatar - Dijital İkiz Konfigürasyonu
+
+# Ses Klonlama (GPT-SoVITS)
+voice:
+  model_path: "Linly-Talker/GPT_SoVITS/pretrained_models"
+  ref_audio_duration: 10        # saniye (en az 3s, ideal 10s)
+  sample_rate: 22050
+  language: "tr"                # Türkçe için "tr", otomatik için "auto"
+
+# Konuşan Yüz (SadTalker)
+avatar:
+  model: "sadtalker"            # sadtalker | musetalk
+  still_mode: false             # true = az hareket, false = doğal hareket
+  enhancer: "gfpgan"            # yüz kalitesi artırıcı
+  preprocess: "crop"            # crop | full | extcrop | resize | full_vid
+  size: 512                     # 256 | 512
+
+# Pipeline
+pipeline:
+  device: "cuda"                # cuda | cpu (cpu çok yavaş)
+  batch_size: 1
+  fps: 25
+  output_format: "mp4"
+
+# Linly-Talker Ayarları
+linly_talker:
+  repo_path: "Linly-Talker"
+  checkpoints_path: "Linly-Talker/checkpoints"

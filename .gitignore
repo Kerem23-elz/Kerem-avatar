@@ -1,0 +1,28 @@
+# Linly-Talker (submodule olarak değil, kurulumda klonlanır)
+Linly-Talker/
+
+# Büyük model dosyaları
+*.pth
+*.ckpt
+*.bin
+*.safetensors
+checkpoints/
+
+# Kişisel medya dosyaları
+inputs/*.mp4
+inputs/*.wav
+inputs/*.jpg
+inputs/*.jpeg
+inputs/*.png
+outputs/
+
+# Python
+__pycache__/
+*.pyc
+*.egg-info/
+.venv/
+venv/
+
+# OS
+.DS_Store
+Thumbs.db
